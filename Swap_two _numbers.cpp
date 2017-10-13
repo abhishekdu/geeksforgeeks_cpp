@@ -4,7 +4,7 @@ using namespace std;
 void swap()
 {
     int a,b;
-    cout<<"Enter 2 numbers";
+    cout<<"Enter two numbers";
     cin>>a>>b;
     
     a=a+b;
@@ -13,6 +13,7 @@ void swap()
     
     cout<<"Swapped no are "<<a<<" "<<b<<"\n";
 }
+
 int main() {
     int t;
 	cout<<"Enter no. of times you want to run this";
