@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+int gcd(int a,int b)
+{
+    int gcdis=1;
+    if(b>a)
+    {
+        int temp=b;
+        b=a;
+        a=temp;
+    }
+        for(int i=1;i<=b;i++)
+        {
+            if((a%i==0)&&(b%i==0))
+            {
+                gcdis=i;    
+            }
+            
+        }
+    
+    return gcdis;
+}
+int main() {
+    int t,a,b;
+   cout<<"Enter no. of times you want to run this";
+	cin>>t;
+	
+	for(int j=0;j<t;j++)
+	{
+	    cout<<"Enter 2 numbers";
+	    cin>>a>>b;
+	    cout<<"GCD is"<<gcd(a,b)<<"\n";
+	}
+	return 0;
+}
