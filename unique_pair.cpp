@@ -1,46 +1,52 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-void find_pair()
+
+void pair_is()
 {
-    int n,a[1000][2]={0};
-    //cout<<"Enter no. of elements ";
+    int n,a[1000];
+    //cout<<"Enter no of element in the array";
     cin>>n;
     for(int i=0;i<n;i++)
     {
-        cin>>a[i][0];
+        cin>>a[i];
+
     }
-    int flag=1;
-    for(int j=0;j<n;j++)
+    for(int i=0;i<n;i++)
     {
-        for(int k=j+1;k<n;k++)
+        for(int j=i+1;j<n;j++)
         {
-            
-        cout<<a[j][0]<<" "<<a[k][0]<<" "<<j<<" "<<k;
-            if((a[j][0]==a[k][0]) && (a[j][1]!=1) && (a[k][1]!=1))
+            if(a[i]==a[j] && a[i]>=0 && a[j]>=0)
             {
-               flag=0; 
-               a[j][1]=1;
-               a[k][1]=1;
-               cout<<"flag";
-               break;
-               
+                a[i]=a[j]=-1;
+                break;
             }
-            
         }
-        if(flag==1)
-        cout<<"c"<<a[j][0]<<" ";
-        flag=1;
+        
     }
+    int temp[2],count=0;;
+    for(int i=0;i<n;i++)
+    {
+
+        if(a[i]>0)
+        temp[count++]=a[i];
+    }
+    if(temp[0]>temp[1])
+    {
+        temp[0]=temp[0]+temp[1];
+        temp[1]=temp[0]-temp[1];
+        temp[0]=temp[0]-temp[1];
+    }
+    cout<<temp[0]<<" "<<temp[1];
     cout<<"\n";
-    
 }
-int main() {
+int main()
+{
     int t;
-	//cout<<"Enter no. of times you want to run ";
-	cin>>t;
-	for(int i=0;i<t;i++)
-	{
-	    find_pair();
-	}
-	return 0;
+ //   cout<<"Enter no. of times you want to run this";
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        pair_is();
+    }
+    return 0;
 }
