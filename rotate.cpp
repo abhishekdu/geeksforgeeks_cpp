@@ -12,7 +12,7 @@ void rotate()
         cin>>a[i];
     }
     
-        //swapping anti clockwise by 1 place
+        //swapping clockwise by 1 place
         int temp[1];
         temp[0]=a[0];
         for(int j=1;j<n-i+1;j++)
