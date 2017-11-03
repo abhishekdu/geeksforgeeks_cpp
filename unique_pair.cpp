@@ -1,6 +1,7 @@
+
 #include<iostream>
 using namespace std;
-
+//Namespace std;
 void pair_is()
 {
     int n,a[1000];
